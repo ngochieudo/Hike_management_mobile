@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Assignment</string>
+    <string name="required">This field is required</string>
+    <string name="name">Name</string>
+    <string name="location">Location\n</string>
+    <string name="length">Length</string>
+    <string name="desc">Description\n</string>
+    <string name="guide">Guide</string>
+    <string name="title_activity_form">FormActivity</string>
+    <string name="date">Date</string>
+</resources>
