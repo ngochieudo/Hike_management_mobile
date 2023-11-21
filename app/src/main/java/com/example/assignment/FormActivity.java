@@ -67,16 +67,15 @@ public class FormActivity extends AppCompatActivity {
                 .allowMainThreadQueries()
                 .build();
         dao = db.hikeDao();
-
-        setSupportActionBar(binding.formToolbar);
-        // set title for activity
         binding.formToolbar.setTitle(isUpdated ? "Update Hike" : "Create Hike");
+        // set back button
+        setSupportActionBar(binding.formToolbar);
+        binding.formToolbar.setNavigationOnClickListener(v -> onBackPressed());
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-//        db = new DatabaseHelper(this);
 
         hike = (Hike) getIntent().getSerializableExtra("hike");
-
-
         final TextInputEditText hikeName = binding.hikeName;
         final TextInputEditText hikeLocation = binding.hikeLocation;
 //        final Button hikeDate = view.findViewById(R.id.edit_date);

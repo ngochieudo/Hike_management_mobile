@@ -14,6 +14,8 @@ import com.example.assignment.MainActivity;
 import com.example.assignment.R;
 import com.example.assignment.db.entity.Hike;
 import java.util.ArrayList;
+import java.util.List;
+
 public class HikesAdapter extends RecyclerView.Adapter<HikesAdapter.MyViewHolder>{
     private Context context;
     private ArrayList<Hike> hikesList;
@@ -82,5 +84,11 @@ public class HikesAdapter extends RecyclerView.Adapter<HikesAdapter.MyViewHolder
     @Override
     public int getItemCount() {
         return hikesList.size();
+    }
+
+    // do update hikeList in the adapter and notify the adapter for changes
+    public void updateList(List<Hike> list){
+        hikesList = (ArrayList<Hike>) list;
+        notifyDataSetChanged();
     }
 }
